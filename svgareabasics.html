@@ -1,0 +1,36 @@
+<HTML>
+	<TITLE>SVG с настраиваемыми границами</TITLE>
+	
+	<BODY>
+		<SCRIPT src="Vue.js"></SCRIPT>
+		
+		<DIV id="mySVG">
+			Ширина: <input v-model="wdth">
+			<br>			
+			Высота: <input v-model="hght">
+			<br>
+			<svg :width="wdth"
+				 :height="hght">
+			</svg>
+		</DIV>
+		
+		<SCRIPT>
+			var app = new Vue({
+				el: '#mySVG',
+				data: 
+				{
+					wdth: 320,
+					hght: 240
+				}
+			})
+		</SCRIPT>
+
+		<STYLE type="text/css">
+			svg
+			{
+				border: 1px solid #000000;
+			}
+		</STYLE>
+	</BODY>
+	
+</HTML>
